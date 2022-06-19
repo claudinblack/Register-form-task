@@ -110,8 +110,10 @@ input[type=email]:invalid:focus::-webkit-input-placeholder{
     height:40px;
     cursor: pointer;
 }
-.button:actve:focus{
-	color:hsl(154,59,75%}
+.button:focus{
+	background-color:hsl(154,59%,60%}
+.button:hover{
+	background-color:hsl(154,59%,60%}
 
 .note{
     font-size: smaller;
