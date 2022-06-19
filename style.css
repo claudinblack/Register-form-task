@@ -1,0 +1,136 @@
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;}
+    
+body{  
+    background-image:url('bg-intro-desktop.png');
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+
+main{
+    background-image:url('bg-intro-desktop.png');
+    background-color: rgb(244, 119, 119);
+    width: 70%;
+    height:80vh;
+    margin:center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-position: 100%;
+}
+
+.box{
+    display: flexbox;
+    flex-direction:column;
+    color: white;
+    padding: 10px;
+    justify-items: center;
+    margin: 8px;
+}
+h3{
+    font-weight:bolder;
+    font-size: 30px;
+}
+p{
+    font-size: smaller;
+    font-weight: 200;
+}
+
+.try{
+    color:white;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    border: 2px;
+    padding:5px 10px;
+    margin:5px;
+    font-size: small;
+    font-weight: 400;
+}
+
+form {
+    background-color: white;
+	height: 65vh;
+    width: 350px;
+    border: 5px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 5pt;
+    margin:8px,0;   
+}
+input{
+    border-radius: 5px;
+    width: 320px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 8px 2px;
+    box-sizing: border-box;
+}
+input:active{
+    border-color: rgb(244, 119, 119);
+    background-image: url('icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+button {
+	background-color: hsl(154,59%,51%);
+	color: white;
+	text-transform: uppercase;
+	font-size: 8pt;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 320px;
+    height:30px;
+    cursor: pointer;
+}
+
+.note{
+    font-size: smaller;
+    color:hsl(246,25%,77%);
+    text-justify: distribute;
+}
+.not{
+    font-size: smaller;
+    color:hsl(0,100%,74%);
+    cursor: pointer;
+}
+
+/* This is for making the site responsive for mobile*/
+@media screen and (width: 375px) {
+    body{font-size:10pt;
+		margin: 0;
+		padding: 2px;
+		box-shadow:none;
+	}
+
+    main{
+        display:flex;
+        flex-direction: column;
+    }
+
+	input{
+		width: 200px;
+		height: 20px;
+	}
+
+	button {
+		width: 100px;
+		font-size: 10pt;
+	}
+}
+
+/*Responsive to desktop*/
+@media screen and (width: 1440px){
+    body{
+        background-image: url('bg-intro-desktop.png');
+        background-color: hsl(0,100%,74%);
+    }
+}
