@@ -72,11 +72,30 @@ input{
     margin: 8px 2px;
     box-sizing: border-box;
 }
-input:active{
-    border-color: rgb(244, 119, 119);
-    background-image: url('icon-error.svg');
-    background-repeat: no-repeat;
+input:invalid:focus{
+    outline:2px solid hsl(0,100%,74%);
+    background: url('icon-error.svg') no-repeat 96%center white;
     background-position: right;
+}
+input:required:focus ~ .error-message{
+	display:block;
+	color:hsl(0,100%,74%);
+	text-align:right;
+	font-size:12px;
+	font-style:italic;
+}
+.error-message{
+	display:none;
+	margin-bottom: 10px;
+}
+input:valid{
+	outline: 2px solid silver;
+}
+input:required{
+	outline: 2px solid transparent;
+}
+input[type=email]:invalid:focus::-webkit-input-placeholder{
+	color:hsl(0,100%,74%);
 }
 
 button {
@@ -105,7 +124,7 @@ button {
 
 /* This is for making the site responsive for mobile*/
 @media screen and (width: 375px) {
-    body{font-size:10pt;
+    *{font-size:10pt;
 		margin: 0;
 		padding: 2px;
 		box-shadow:none;
@@ -114,17 +133,31 @@ button {
     main{
         display:flex;
         flex-direction: column;
+	 width: 50%;
+    height:100vh;
+    margin:center;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
     }
-
-	input{
-		width: 200px;
-		height: 20px;
-	}
-
 	button {
 		width: 100px;
 		font-size: 10pt;
 	}
+	.try{
+    justify-content: center;
+    width: 100px;}
+
+form {
+    height: 50vh;
+    width: 100px;
+    }
+input{
+    border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    box-sizing: border-box;}
+
 }
 
 /*Responsive to desktop*/
