@@ -119,24 +119,32 @@ input[type=email]:invalid:focus::-webkit-input-placeholder{
     font-size: smaller;
     color:hsl(246,25%,77%);
 }
-ins{
+.ins{
     font-size: smaller;
     color:hsl(0,100%,74%);
     cursor: pointer;
 }
 
 /* This is for making the site responsive for mobile*/
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
      body{font-size:8pt;
-}
+	     margin:0;
+	     padding:8px;
+	}
 main{display:flex;
     flex-direction:column;
-    height:auto;
-    width:auto;
+    height:0;
+    width:0;
 }
 form{
-    height:auto;
-    width:auto;}
+    height:50vh;
+    width:0;}
+input{
+	height:30px;
+	width:200px;}
+.button{
+	height:30px;
+	width:200px;}
 }
 
 /*Responsive to desktop*/
