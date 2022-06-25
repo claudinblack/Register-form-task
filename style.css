@@ -23,7 +23,7 @@ main{
 }
 
 .box{
-    display: flexbox;
+    display: flex;
     flex-direction:column;
     color: white;
     padding: 10px;
@@ -143,8 +143,12 @@ ins{
     }
     form{
         height:45vh;
-        width:0;
+        width:250px;
     }
+    try{
+	height:30px;
+	    width:250px;
+	}
     input{
         height:30px;
         width:200px;
